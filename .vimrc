@@ -1,4 +1,5 @@
 " #### Settings #####
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 filetype off
 syntax on
@@ -62,19 +63,6 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size = 1
 
-" #### PLUGINS ####
-set rtp+=/home/madamski/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'git://git.wincent.com/command-t.git'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'vim-airline/vim-airline'
-
-call vundle#end()            " required
-filetype plugin indent on    " required
-"
 " #### THEMES ####
 " Solarized dark
 syntax enable
