@@ -13,8 +13,8 @@ To install please do followings:
     git init
     git remote add https://github.com/divine89/vimrc.git
     git pull origin master
-    
+
 ##Warning
 
-Those commands will automaticly get all files from repository and put it to your home directory, so your curently .vimrc file and .vim folder will be replaced. 
+Those commands will automaticly get all files from repository and put it to your home directory, so your curently .vimrc file and .vim folder will be replaced.
 

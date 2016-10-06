@@ -7,3 +7,6 @@
 [submodule ".vim/bundle/vim-indent-guides"]
 	path = .vim/bundle/vim-indent-guides
 	url = https://github.com/nathanaelkane/vim-indent-guides
+[submodule ".vim/bundle/undotree"]
+	path = .vim/bundle/undotree
+	url = https://github.com/mbbill/undotree
