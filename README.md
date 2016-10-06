@@ -2,7 +2,7 @@
 
 This is my personal Vim configuration. It is very simple and clear.
 
-Please make backup of your files:
+Please at first make backup of your files:
 
     mkdir ~/VimFilesBackup
     mv -f ~/.vimrc ~/.vim ~/VimFilesBackup
