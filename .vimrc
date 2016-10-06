@@ -4,12 +4,23 @@ execute pathogen#infect()
 filetype off
 syntax on
 filetype indent on
+filetype plugin on
+command W w !sudo tee % > /dev/nul
+autocmd! bufwritepost .vimrc source ~/.vimrc
 
+set clipboard=unnamed
+set foldcolumn=1
+set showmatch
+set incsearch
+set hlsearch
+set smartcase
+set ignorecase
 set backspace=2
 set nobackup
-set nowritebackup
+set nowb
 set noswapfile
-set history=50
+set nowritebackup
+set history=500
 set ruler
 set showcmd
 set incsearch
@@ -38,6 +49,8 @@ set softtabstop=2
 set shiftwidth=2
 set shiftround
 set expandtab
+set lbr
+set tw=80
 
 set rnu
 function! ToggleNumbersOn()
@@ -63,12 +76,16 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size = 1
 
-"if has("persistent_undo")
+if has("persistent_undo")
     set undodir=~/.undodir/
     set undofile
-"endif
+endif
 
-nnoremap <C-U> :UndotreeToggle<cr>
+if has("autocmd")
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+nnoremap <C-H> :UndotreeToggle<cr>
 
 " #### THEMES ####
 " Solarized dark
