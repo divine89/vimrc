@@ -12,7 +12,7 @@ set clipboard=unnamed
 set foldcolumn=1
 set showmatch
 set incsearch
-set hlsearch
+set nohlsearch
 set smartcase
 set ignorecase
 set backspace=2
